@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Voting App</title>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-wrapper">
+    
+    <!-- Top Bar Navigation -->
+    <header class="top-bar">
+      <h1 class="main-title">Mini Voting App</h1>
+      <div class="top-actions">
+        <button id="resetBtn" class="top-btn">
+          <span>🔄</span> Reset
+        </button>
+        <button id="fullscreenBtn" class="top-btn">
+          <span>⛶</span> Fullscreen
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Container Card -->
+    <main class="poll-container">
+      
+      <!-- Container Header -->
+      <div class="poll-header">
+        <div class="poll-info">
+          <div class="badge-live">
+            <span class="dot"></span> LIVE POLL
+          </div>
+          <h2 class="poll-title">What should we build next? 🚀</h2>
+          <p class="poll-subtitle">Vote satu project yang paling ingin kamu buat berikutnya.</p>
+        </div>
+        <div class="total-votes-box">
+          <span class="total-label">Total Votes</span>
+          <span id="totalVotesText" class="total-number">16</span>
+        </div>
+      </div>
+
+      <!-- Candidates Grid -->
+      <div class="candidates-grid">
+
+        <!-- Candidate 1: Mini Game -->
+        <div class="candidate-card" id="card-game">
+          <div class="candidate-icon">🎮</div>
+          <h3 class="candidate-title">Mini Game</h3>
+          <p class="candidate-desc">Project game sederhana dengan JavaScript.</p>
+          <div class="vote-stats">
+            <span class="vote-count-text">📦 <span id="votes-game">7</span> vote</span>
+            <span id="percent-game" class="percent-text">44%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="bar-game" class="progress-bar-fill" style="width: 44%;"></div>
+          </div>
+          <button id="btn-game" class="vote-action-btn">Vote 🎮</button>
+        </div>
+
+        <!-- Candidate 2: Mini Store -->
+        <div class="candidate-card" id="card-store">
+          <div class="candidate-icon">🛒</div>
+          <h3 class="candidate-title">Mini Store</h3>
+          <p class="candidate-desc">Simulasi toko online dan shopping cart.</p>
+          <div class="vote-stats">
+            <span class="vote-count-text">📦 <span id="votes-store">2</span> vote</span>
+            <span id="percent-store" class="percent-text">13%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="bar-store" class="progress-bar-fill" style="width: 13%;"></div>
+          </div>
+          <button id="btn-store" class="vote-action-btn">Vote 🛒</button>
+        </div>
+
+        <!-- Candidate 3: To-Do App -->
+        <div class="candidate-card" id="card-todo">
+          <div class="candidate-icon">📝</div>
+          <h3 class="candidate-title">To-Do App</h3>
+          <p class="candidate-desc">Aplikasi daftar tugas dengan dynamic DOM.</p>
+          <div class="vote-stats">
+            <span class="vote-count-text">📦 <span id="votes-todo">4</span> vote</span>
+            <span id="percent-todo" class="percent-text">25%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="bar-todo" class="progress-bar-fill" style="width: 25%;"></div>
+          </div>
+          <button id="btn-todo" class="vote-action-btn">Vote 📝</button>
+        </div>
+
+        <!-- Candidate 4: Quiz App -->
+        <div class="candidate-card" id="card-quiz">
+          <div class="candidate-icon">🧠</div>
+          <h3 class="candidate-title">Quiz App</h3>
+          <p class="candidate-desc">Quiz interaktif dengan score dan feedback.</p>
+          <div class="vote-stats">
+            <span class="vote-count-text">📦 <span id="votes-quiz">3</span> vote</span>
+            <span id="percent-quiz" class="percent-text">19%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="bar-quiz" class="progress-bar-fill" style="width: 19%;"></div>
+          </div>
+          <button id="btn-quiz" class="vote-action-btn">Vote 🧠</button>
+        </div>
+
+      </div>
+
+      <!-- Current Leader Box -->
+      <section class="leader-section">
+        <div class="leader-info">
+          <div class="leader-tag">🏆 CURRENT LEADER</div>
+          <h3 id="leaderTitle" class="leader-name">🎮 Mini Game</h3>
+          <p id="leaderDesc" class="leader-desc">7 vote — sementara berada di posisi pertama 🔥</p>
+        </div>
+        <div class="leader-trophy">🏆</div>
+      </section>
+
+      <!-- Feedback Notification Bar -->
+      <div id="feedbackBar" class="feedback-bar">
+        ✅ Vote berhasil! Kamu memilih <span id="feedbackChoice">🎮 Mini Game</span>
+      </div>
+
+    </main>
+
+    <!-- Footer Note -->
+    <footer class="guru-note">
+      💡 <strong>Demo Guru</strong> &nbsp; Core: click event + counter + DOM update. Bonus: progress bar, current leader, reset, dan fullscreen.
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

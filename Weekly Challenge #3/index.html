@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSI Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Banner -->
+        <header class="header">
+            <div class="header-content">
+                <p class="subtitle">HSI BOARDING SCHOOL • WEB PROGRAMMING</p>
+                <h1 class="title">🎓 HSI Student Management</h1>
+            </div>
+            <div class="badge-phase">
+                Phase 4<br><strong>Dynamic UI + Storage</strong>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-layout">
+            
+            <!-- Form Section (Left) -->
+            <section class="card form-card">
+                <h2 id="formTitle">➕ Tambah Siswa</h2>
+                
+                <form id="studentForm">
+                    <input type="hidden" id="studentId">
+
+                    <div class="form-group">
+                        <label for="studentName">Nama Siswa</label>
+                        <input type="text" id="studentName" placeholder="Contoh: Ahmad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentScore">Nilai</label>
+                        <input type="number" id="studentScore" min="0" max="100" placeholder="0 - 100" required>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" id="submitBtn" class="btn btn-primary">➕ Tambah Siswa</button>
+                        <button type="button" id="cancelBtn" class="btn btn-secondary hidden">❌ Batal</button>
+                    </div>
+                </form>
+
+                <p class="info-note">
+                    💡 Data yang ditambahkan akan masuk ke array JavaScript, kemudian UI dirender ulang dan disimpan ke browser.
+                </p>
+            </section>
+
+            <!-- List & Stats Section (Right) -->
+            <section class="card content-card">
+                
+                <div class="content-header">
+                    <h2>📋 Daftar Siswa</h2>
+                    <span class="badge-storage">💾 LocalStorage</span>
+                </div>
+
+                <!-- Alert Area -->
+                <div id="alertContainer" class="alert hidden"></div>
+
+                <!-- Student List Container -->
+                <div id="studentList" class="student-list">
+                    <!-- Dynamic rendering via JavaScript -->
+                </div>
+
+                <!-- Statistics Section -->
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <span class="stat-label">Total Siswa</span>
+                        <span class="stat-value" id="totalStudents">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Rata-rata Nilai</span>
+                        <span class="stat-value" id="averageScore">0</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
