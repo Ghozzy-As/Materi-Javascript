@@ -105,7 +105,7 @@
 
   .textfield { position: relative; display: flex; align-items: center; min-height: 36px; background: var(--ds-background-input); border: 1px solid var(--ds-border-input); border-radius: 6px; color: var(--ds-text); }
   .textfield:hover { background: var(--ds-background-input-hovered); }
-  .textfield > svg.ic { position: absolute; left: 10px; color: var(--ds-text-subtlest); pointer-events: none; }
+  .textfield > svg.ic { position: absolute; left: 10px; color: var(--ds-text-subtlest); pointer-events: none; z-index: 1; }
   .textfield input { width: 100%; border: 0; background: transparent; outline: 0; font: inherit; color: inherit; padding: 6px 8px 6px 34px; cursor: pointer; }
 
   .card { background: var(--ds-surface-raised); box-shadow: var(--ds-shadow-raised); border-radius: 8px; padding: 20px; min-width: 0; }
@@ -158,6 +158,12 @@
   .tabulator .tabulator-cell { border: 0 !important; padding: 10px 8px !important; color: var(--ds-text); }
   .tabulator-placeholder { color: var(--ds-text-subtlest); }
 
+  /* Flatpickr Theme Adjustments for Dark Mode */
+  .flatpickr-calendar { background: var(--ds-surface-overlay) !important; box-shadow: var(--ds-shadow-overlay) !important; border: 1px solid var(--ds-border) !important; color: var(--ds-text) !important; }
+  .flatpickr-day { color: var(--ds-text) !important; }
+  .flatpickr-day.flatpickr-disabled, .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay { color: var(--ds-text-subtlest) !important; opacity: 0.4; }
+  .flatpickr-months .flatpickr-month, .flatpickr-current-month .flatpickr-monthDropdown-months, .flatpickr-current-month input.cur-year { color: var(--ds-text) !important; fill: var(--ds-text) !important; }
+
   @media (max-width: 960px) {
     .app { grid-template-columns: 1fr; }
     .side { position: static; height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; }
@@ -184,7 +190,7 @@
         </a>
         <a><svg class="ic" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>Produk</a>
         <a><svg class="ic" viewBox="0 0 24 24"><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Laporan</a>
-        <a><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1-.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Pengaturan</a>
+        <a><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Pengaturan</a>
       </nav>
     </div>
     <div class="side-foot">
@@ -270,217 +276,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tabulator-tables@6/dist/js/tabulator.min.js"></script>
 
-<script>
-  // === MASTER DATA PRODUK & PROMO ===
-  let masterProduk = [
-    { id: 1, produk: "Nasi Goreng", kategori: "Makanan", terjual: 38, omzetVal: 380000, omzet: "Rp380.000" },
-    { id: 2, produk: "Mie Ayam", kategori: "Makanan", terjual: 23, omzetVal: 184000, omzet: "Rp184.000" },
-    { id: 3, produk: "Nasi Uduk", kategori: "Makanan", terjual: 23, omzetVal: 161000, omzet: "Rp161.000" },
-    { id: 4, produk: "Air Mineral", kategori: "Minuman", terjual: 34, omzetVal: 136000, omzet: "Rp136.000" },
-    { id: 5, produk: "Es Teh Manis", kategori: "Minuman", terjual: 42, omzetVal: 126000, omzet: "Rp126.000" },
-    { id: 6, produk: "Keripik Singkong", kategori: "Snack", terjual: 26, omzetVal: 78000, omzet: "Rp78.000" }
-  ];
-
-  const MASTER_PROMO = [
-    { id: 1, title: "Senin Hemat", sub: "Mie Ayam cuma Rp7.000", badge: "Senin", cls: "blue", emoji: "🍱", kategori: "Makanan" },
-    { id: 2, title: "Paket Sarapan", sub: "Nasi Uduk + Es Teh Rp9.000", badge: "Setiap Hari", cls: "yellow", emoji: "🍳", kategori: "Makanan" },
-    { id: 3, title: "Menu Baru", sub: "Pisang Goreng Coklat", badge: "Minggu Ini", cls: "teal", emoji: "🍫", kategori: "Snack" },
-    { id: 4, title: "Jumat Berkah", sub: "Air mineral gratis tiap beli makanan", badge: "Jumat", cls: "red", emoji: "💧", kategori: "Minuman" }
-  ];
-
-  const OMZET_DAILY = {
-    Makanan: [150000, 100000, 140000, 150000, 120000, 100000, 180000],
-    Minuman: [50000, 30000, 50000, 50000, 50000, 30000, 70000],
-    Snack:   [20000, 20000, 20000, 20000, 20000, 20000, 20000]
-  };
-
-  let tabulatorTable = null;
-  let chartBar = null;
-  let chartDn = null;
-  let tomSelectInstance = null;
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // 1. Flatpickr
-    flatpickr("#fDate", {
-      mode: "range",
-      dateFormat: "d M Y",
-      defaultDate: ["2026-10-17", "2026-10-23"],
-      locale: "id"
-    });
-
-    // 2. Tabulator Table
-    tabulatorTable = new Tabulator("#tProd", {
-      data: [],
-      layout: "fitColumns",
-      placeholder: "Silakan pilih kategori di atas untuk melihat data produk.",
-      columns: [
-        { title: "Produk", field: "produk", width: 130 },
-        { title: "Kategori", field: "kategori", formatter: function(cell){
-            let cat = cell.getValue();
-            let cls = cat === 'Makanan' ? 'blue' : (cat === 'Minuman' ? 'green' : 'purple');
-            return `<span class="lozenge ${cls}">${cat.toUpperCase()}</span>`;
-          }
-        },
-        { title: "Terjual", field: "terjual", hozAlign: "center", width: 80 },
-        { title: "Omzet", field: "omzet", hozAlign: "right" },
-        { 
-          formatter: function() { return "🗑️"; }, width: 50, hozAlign: "center", cellClick: function(e, cell){
-            let rowData = cell.getRow().getData();
-            Swal.fire({
-              title: "Hapus Produk?",
-              text: `Hapus "${rowData.produk}" dari daftar?`,
-              icon: "warning",
-              showCancelButton: true,
-              confirmButtonText: "Ya, Hapus",
-              cancelButtonText: "Batal",
-              confirmButtonColor: '#C9372C'
-            }).then((result) => {
-              if (result.isConfirmed) {
-                // Hapus dari master produk
-                masterProduk = masterProduk.filter(p => p.id !== rowData.id);
-                // Refresh dashboard berdasarkan kategori yang sedang aktif dipilih
-                updateDashboard(tomSelectInstance.getValue());
-                Swal.fire({ title: "Terhapus!", text: "Produk berhasil dihapus.", icon: "success", timer: 1200, showConfirmButton: false });
-              }
-            });
-          }
-        }
-      ],
-    });
-
-    // 3. Chart.js Bar
-    const ctxBar = document.getElementById('cBar').getContext('2d');
-    chartBar = new Chart(ctxBar, {
-      type: 'bar',
-      data: {
-        labels: ['Sab, 17', 'Min, 18', 'Sen, 19', 'Sel, 20', 'Rab, 21', 'Kam, 22', 'Jum, 23'],
-        datasets: [{ data: [0,0,0,0,0,0,0], backgroundColor: '#357DE8', borderRadius: 4 }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: { y: { ticks: { callback: v => (v/1000) + 'rb' } } }
-      }
-    });
-
-    // 4. Chart.js Donut
-    const ctxDn = document.getElementById('cDn').getContext('2d');
-    chartDn = new Chart(ctxDn, {
-      type: 'doughnut',
-      data: {
-        labels: [],
-        datasets: [{ data: [], backgroundColor: ['#357DE8', '#82B536', '#BF63F3'], borderWidth: 0 }]
-      },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
-    });
-
-    // 5. Tom Select
-    tomSelectInstance = new TomSelect("#fKat", {
-      plugins: ['remove_button'],
-      options: [
-        { value: 'Makanan', text: 'Makanan' },
-        { value: 'Minuman', text: 'Minuman' },
-        { value: 'Snack', text: 'Snack' }
-      ],
-      items: [], // Kosong di awal
-      onChange: function(selectedCategories) {
-        updateDashboard(selectedCategories);
-      }
-    });
-
-    updateDashboard([]);
-
-    // 6. Mode Gelap / Terang Toggle
-    document.getElementById('btnTheme').addEventListener('click', () => {
-      const html = document.documentElement;
-      const isDark = html.getAttribute('data-color-mode') === 'dark';
-      html.setAttribute('data-color-mode', isDark ? 'light' : 'dark');
-      document.getElementById('themeLabel').innerText = isDark ? 'Mode gelap' : 'Mode terang';
-    });
-  });
-
-  // === FUNGSI UTAMA SINKRONISASI REAL-TIME ===
-  function updateDashboard(categories) {
-    const isEmp = !categories || categories.length === 0;
-
-    // Filter produk dari master yang sesuai dengan kategori terpilih
-    const filteredProd = masterProduk.filter(p => categories.includes(p.kategori));
-    const filteredPromo = MASTER_PROMO.filter(p => categories.includes(p.kategori));
-
-    // Update Subtitle
-    document.getElementById('subInfo').innerText = isEmp
-      ? "Pilih kategori untuk menampilkan data"
-      : `17 Okt - 23 Okt · ${categories.length} kategori · ${filteredProd.length} produk`;
-
-    // 1. Update Kartu KPI
-    if (isEmp) {
-      document.getElementById('kOmzet').innerText = "-";
-      document.getElementById('cOmzet').innerText = "";
-      document.getElementById('kItem').innerText = "-";
-      document.getElementById('cItem').innerText = "";
-      document.getElementById('kTrx').innerText = "-";
-      document.getElementById('cTrx').innerText = "";
-    } else {
-      const totalOmzet = filteredProd.reduce((sum, item) => sum + item.omzetVal, 0);
-      const totalItem = filteredProd.reduce((sum, item) => sum + item.terjual, 0);
-      const avgOmzet = Math.round(totalOmzet / 7);
-
-      document.getElementById('kOmzet').innerText = "Rp" + totalOmzet.toLocaleString('id-ID');
-      document.getElementById('cOmzet').innerText = `Rata-rata Rp${avgOmzet.toLocaleString('id-ID')} per hari`;
-      document.getElementById('kItem').innerText = totalItem;
-      document.getElementById('cItem').innerText = ` Dari ${filteredProd.length} produk yang laku`;
-      document.getElementById('kTrx').innerText = Math.round(totalItem / 12);
-      document.getElementById('cTrx').innerText = "Dalam 7 hari";
-    }
-
-    // 2. Update Tabulator Table
-    tabulatorTable.setData(filteredProd);
-    document.getElementById('prodCount').innerText = `${filteredProd.length} produk`;
-
-    // 3. Update Grafik Bar (Omzet per Hari)
-    let dailyTotals = [0, 0, 0, 0, 0, 0, 0];
-    categories.forEach(cat => {
-      if (OMZET_DAILY[cat]) {
-        OMZET_DAILY[cat].forEach((val, idx) => dailyTotals[idx] += val);
-      }
-    });
-    chartBar.data.datasets[0].data = dailyTotals;
-    chartBar.update();
-
-    // 4. Update Grafik Donut (Item per Kategori)
-    let catLabels = [];
-    let catCounts = [];
-    categories.forEach(cat => {
-      const totalCatItem = masterProduk
-        .filter(p => p.kategori === cat)
-        .reduce((sum, p) => sum + p.terjual, 0);
-      catLabels.push(cat);
-      catCounts.push(totalCatItem);
-    });
-    chartDn.data.labels = catLabels;
-    chartDn.data.datasets[0].data = catCounts;
-    chartDn.update();
-
-    // 5. Update Promo List
-    const promoContainer = document.getElementById('promoList');
-    promoContainer.innerHTML = "";
-    document.getElementById('promoCount').innerText = `${filteredPromo.length} aktif`;
-
-    if (filteredPromo.length === 0) {
-      promoContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--ds-text-subtlest); font-style:italic;">Tidak ada promo aktif untuk kategori ini.</div>`;
-    } else {
-      filteredPromo.forEach(p => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <div class="p-emoji">${p.emoji}</div>
-          <div class="p-body"><b>${p.title}</b><small>${p.sub}</small></div>
-          <span class="lozenge ${p.cls}">${p.badge}</span>
-        `;
-        promoContainer.appendChild(li);
-      });
-    }
-  }
-</script>
+<!-- Script Terpisah -->
+<script src="script.js"></script>
 </body>
 </html>
